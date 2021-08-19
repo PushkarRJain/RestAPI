@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "a71dd543-9737-4d7b-bc9d-e2aa7e392ba5",
+		"name": "restAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "365"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16d-71qCp83Xwn9b51jhwODTCvlnC4E\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Aug 2021 06:08:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":200,\"error\":null,\"response\":[{\"product_id\":1,\"product_name\":\"Product 1\",\"product_price\":2000},{\"product_id\":2,\"product_name\":\"Product 2\",\"product_price\":5000},{\"product_id\":3,\"product_name\":\"Product 3\",\"product_price\":4000},{\"product_id\":4,\"product_name\":\"Product 4\",\"product_price\":6000},{\"product_id\":5,\"product_name\":\"Product 5\",\"product_price\":7000}]}"
+				}
+			]
+		},
+		{
+			"name": "Get Request 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\": \"Product 6 Added\",\r\n    \"product_price\": 6000\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "365"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16d-71qCp83Xwn9b51jhwODTCvlnC4E\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Aug 2021 06:08:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":200,\"error\":null,\"response\":[{\"product_id\":1,\"product_name\":\"Product 1\",\"product_price\":2000},{\"product_id\":2,\"product_name\":\"Product 2\",\"product_price\":5000},{\"product_id\":3,\"product_name\":\"Product 3\",\"product_price\":4000},{\"product_id\":4,\"product_name\":\"Product 4\",\"product_price\":6000},{\"product_id\":5,\"product_name\":\"Product 5\",\"product_price\":7000}]}"
+				}
+			]
+		},
+		{
+			"name": "Post Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\": \"Product 2 Update\",\r\n    \"product_price\": 7000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pull Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\": \"update product 3\",\r\n    \"product_price\": 1897\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "365"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16d-71qCp83Xwn9b51jhwODTCvlnC4E\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Aug 2021 06:08:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":200,\"error\":null,\"response\":[{\"product_id\":1,\"product_name\":\"Product 1\",\"product_price\":2000},{\"product_id\":2,\"product_name\":\"Product 2\",\"product_price\":5000},{\"product_id\":3,\"product_name\":\"Product 3\",\"product_price\":4000},{\"product_id\":4,\"product_name\":\"Product 4\",\"product_price\":6000},{\"product_id\":5,\"product_name\":\"Product 5\",\"product_price\":7000}]}"
+				}
+			]
+		},
+		{
+			"name": "Delete Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "365"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16d-71qCp83Xwn9b51jhwODTCvlnC4E\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Aug 2021 06:08:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":200,\"error\":null,\"response\":[{\"product_id\":1,\"product_name\":\"Product 1\",\"product_price\":2000},{\"product_id\":2,\"product_name\":\"Product 2\",\"product_price\":5000},{\"product_id\":3,\"product_name\":\"Product 3\",\"product_price\":4000},{\"product_id\":4,\"product_name\":\"Product 4\",\"product_price\":6000},{\"product_id\":5,\"product_name\":\"Product 5\",\"product_price\":7000}]}"
+				}
+			]
+		}
+	]
+}
